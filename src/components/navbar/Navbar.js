@@ -33,12 +33,12 @@ const NavbarMenu = () => {
         setIsLogin(token)
     }, [token])
 
-    // useEffect(() =>{
-    //     console.log(isLogin)
-    // },[isLogin])
+    useEffect(() =>{
+        console.log(isLogin)
+    },[isLogin])
 
     const handleLogOut = () => {
-        dispatch(LogoutAction(''))
+        dispatch(LogoutAction())
     }
 
 

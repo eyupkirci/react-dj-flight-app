@@ -5,6 +5,9 @@ import {
     Route,
 } from "react-router-dom";
 
+import PrivateRoute from './privateRoute/PrivateRoute'
+import PublicRoute from './publicRoute/PublicRoute'
+
 import NavbarMenu from "../components/navbar/Navbar"
 
 import Home from '../pages/home/Home'
@@ -18,16 +21,26 @@ import Register from '../pages/register/Register'
 const AppRouter = () => {
     return (
         <Router>
-        
-            <NavbarMenu/>
+
+            <NavbarMenu />
 
             <Routes>
-                <Route exact path="/" element={<Home/>} />
-                <Route path="/flights" element={<Flights/>} />
-                <Route path="/flightDetail" element={<FlightDetail/>} />
-                <Route path="/profile" element={<Profile/>} />
-                <Route path="/login" element={<Login/>} />
-                <Route path="/register" element={<Register/>} />
+
+                <Route exact path="/" element={<Home />} />
+                <Route path="/flights" element={<Flights />} />
+                <Route path="/flightDetail" element={<FlightDetail />} />
+
+                <Route path="/login" element={<PublicRoute/>} >
+                    <Route path="/login" element={<Login />} />
+                </Route>
+                <Route path="/register" element={<PublicRoute/>} >
+                    <Route path="/register" element={<Register />} />
+                </Route>
+
+                <Route path="/profile" element={<PrivateRoute/>} >
+                    <Route path="/profile" element={<Profile/>} />
+                </Route>
+
             </Routes>
 
         </Router>
