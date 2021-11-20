@@ -38,7 +38,7 @@ const NavbarMenu = () => {
     },[isLogin])
 
     const handleLogOut = () => {
-        dispatch(LogoutAction(''))
+        dispatch(LogoutAction())
     }
 
 
