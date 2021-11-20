@@ -30,7 +30,7 @@ const Login = () => {
 
                 axios.post("https://react-dj-flight-app.herokuapp.com/user/login/", values)
                     .then((response) => {
-                        // console.log(response);
+                        console.log(response);
                         dispatch(LoginAction(response.data.token));
                     })
                     .catch((error) => {
