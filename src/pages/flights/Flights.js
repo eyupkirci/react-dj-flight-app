@@ -10,7 +10,7 @@ const Flights = () => {
      
      
        const fetchData = () => {
-         axios.get('https://react-dj-flight-app.herokuapp.com/api/countries/')
+         axios.get('https://react-dj-flight-app.herokuapp.com/api/flights/')
            .then(({data}) => console.log(data))
      
        }
