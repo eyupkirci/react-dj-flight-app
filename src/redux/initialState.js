@@ -1,8 +1,9 @@
 
-const isLogin =  localStorage.getItem('isLogin')
+const isLogin =  localStorage.getItem('isLogin')?localStorage.getItem('isLogin'):""
 
 const initialState = {
-    isLogin : isLogin
+    isLogin : isLogin,
+    flights : []
 }
 
 export default initialState
