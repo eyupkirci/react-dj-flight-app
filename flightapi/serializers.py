@@ -46,7 +46,7 @@ class FlightSerializer(serializers.ModelSerializer):
         model = Flight
         fields = '__all__'
         # exclude  = ['author']
-        # depth=1
+        depth=1
         
 class ReservationSerializer(serializers.ModelSerializer):
     user = serializers.CharField()
