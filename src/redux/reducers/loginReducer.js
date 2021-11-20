@@ -9,11 +9,14 @@ const loginReducer = (state=initialState.isLogin, action) => {
     
     switch(action.type) {
         case LOGIN_IS_SUCCESS:
+            localStorage.setItem('isLogin', action.payload)
             return action.payload
         case LOGOUT_IS_SUCCESS:
+            localStorage.setItem('isLogin', action.payload)
             return action.payload
         default:
-            return { ...state }
+            // console.log(state)
+            return state
     }
 }
 

@@ -7,7 +7,7 @@ const PrivateRoute = () => {
 
     const isLogin = useSelector(state => state.loginReducer)
 
-    return (isLogin ? <Outlet /> : <Navigate to="/"/>)
+    return (isLogin.length ? <Outlet /> : <Navigate to="/"/>)
 
 
 };
