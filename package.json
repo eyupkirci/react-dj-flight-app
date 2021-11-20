@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://eyupkirci.github.io/my-app",
+  "homepage": "https://eyupkirci.github.io/react-dj-flight-app",
   "proxy": "http://localhost:8000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
