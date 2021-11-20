@@ -6,7 +6,7 @@ const PublicRoute = () => {
 
     const isLogin = useSelector(state => state.loginReducer)
 
-    return (isLogin ? <Navigate to="/" /> : <Outlet />)
+    return (isLogin.length ? <Navigate to="/" /> : <Outlet />)
 
 };
 

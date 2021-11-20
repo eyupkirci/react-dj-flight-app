@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
     Navbar,
     NavbarBrand,
@@ -22,20 +22,10 @@ import { LogoutAction } from '../../redux/actions/LoginActions'
 
 const NavbarMenu = () => {
 
-    const token = useSelector(state => state.loginReducer)
+    const isLogin = useSelector(state => state.loginReducer)
     const dispatch = useDispatch()
 
     const [navbarToggle, setNavbarToggle] = useState(false)
-    const [isLogin, setIsLogin] = useState('')
-
-
-    useEffect(() => {
-        setIsLogin(token)
-    }, [token])
-
-    useEffect(() =>{
-        console.log(isLogin)
-    },[isLogin])
 
     const handleLogOut = () => {
         dispatch(LogoutAction())
@@ -66,7 +56,7 @@ const NavbarMenu = () => {
                         </DropdownToggle>
 
                         {
-                            isLogin ?
+                            isLogin.length ?
                                 (
                                     <DropdownMenu end>
 
